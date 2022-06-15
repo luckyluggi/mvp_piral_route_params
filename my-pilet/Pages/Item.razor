@@ -1,0 +1,21 @@
+﻿@page "/item/create"
+@page "/item/single/{Id}"
+
+<h1>Test</h1>
+
+@if(Id != null){
+    <div>
+        ID: @Id
+    </div>
+} else{
+    <div>
+        The Id was not read from the url.
+    </div>
+}
+
+@code{ 
+    #region params
+    [Parameter]
+    public string Id { get; set; } = "";
+    #endregion
+}
