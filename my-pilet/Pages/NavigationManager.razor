@@ -1,0 +1,15 @@
+﻿@page "/navigationmanager"
+@inject Microsoft.AspNetCore.Components.NavigationManager _navigationManager
+
+<h1>Change Route via Navigationmanager</h1>
+<button @onclick="NavigateToCreateItem">Navigate to "Create Item"</button>
+<button @onclick="NavigateToViewItem">Navigate to "View Item"</button>
+
+@code{ 
+    private void NavigateToCreateItem(){
+        _navigationManager.NavigateTo($"/item/create");
+    }
+    private void NavigateToViewItem(){
+        _navigationManager.NavigateTo($"/item/single/123456789");
+    }
+}

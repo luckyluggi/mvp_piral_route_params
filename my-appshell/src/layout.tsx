@@ -47,6 +47,11 @@ const defaultTiles = (
 const defaultMenuItems = (
   <>
     <MenuItem type="general" meta={{}}>
+      <Link className="nav-link text-dark" to="/navigationmanager">
+        NavigationManager
+      </Link>
+    </MenuItem>
+    <MenuItem type="general" meta={{}}>
       <Link className="nav-link text-dark" to="/item/create">
         Create Item
       </Link>
